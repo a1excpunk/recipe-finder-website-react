@@ -1,5 +1,5 @@
-import Footer from "./Utils/footer.jsx";
-import Header from "./Utils/header.jsx";
+import Footer from "./UtilComponents/footer.jsx";
+import Header from "./UtilComponents/header.jsx";
 import Recepies from "./Recipes/recepies.jsx";
 import "./Index.css";
 

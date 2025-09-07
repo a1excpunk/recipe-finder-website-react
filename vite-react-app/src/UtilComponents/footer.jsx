@@ -7,9 +7,9 @@ function Footer() {
     <footer>
       <p>Made with ❤️ and 🥑</p>
       <div className="social-icons">
-        <img src={instagramIcon} alt="Instagram icon" />
-        <img src={blueskyIcon} alt="Bluesky icon" />
-        <img src={tiktokIcon} alt="Tiktok icon" />
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src={instagramIcon} alt="Instagram icon" /></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src={blueskyIcon} alt="Bluesky icon" /></a>
+        <a href="#" target="_blank" rel="noopener noreferrer"><img src={tiktokIcon} alt="Tiktok icon" /></a>
       </div>
     </footer>
   );

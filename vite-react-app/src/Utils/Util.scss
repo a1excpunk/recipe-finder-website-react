@@ -1,0 +1,179 @@
+// Color palette
+$neutral_900: #163A34;
+$neutral_600: #395852;
+$neutral_300: #D0DCD9;
+$neutral_200: #E0E6E3;
+$neutral_100: #F6F5F1;
+$neutral_0: #FFFFFF;
+
+$orange_500: #FE9F6B;
+$teal_500: #49AC9B;
+$indigo_500: #697DDB;
+
+// Spacing scale
+$spacing-0: 0;
+$spacing-025: 2px;
+$spacing-050: 4px;
+$spacing-075: 6px;
+$spacing-100: 8px;
+$spacing-125: 10px;
+$spacing-150: 12px;
+$spacing-200: 16px;
+$spacing-250: 20px;
+$spacing-300: 24px;
+$spacing-400: 32px;
+$spacing-500: 40px;
+$spacing-600: 48px;
+$spacing-800: 64px;
+$spacing-1000: 80px;
+$spacing-1200: 96px;
+$spacing-1400: 112px;
+$spacing-1600: 128px;
+$spacing-1800: 140px;
+
+// Border radius scale
+$radius-0: 0;
+$radius-4: 4px;
+$radius-6: 6px;
+$radius-8: 8px;
+$radius-10: 10px;
+$radius-12: 12px;
+$radius-16: 16px;
+$radius-20: 20px;
+$radius-24: 24px;
+$radius-full: 999px;
+
+// ===============================
+// Typography Presets
+// ===============================
+
+$text-preset-1: (
+  font: 'Nunito', 
+  weight: 800, // ExtraBold
+  size: 72px,
+  line-height: 110%,
+  letter-spacing: -2px,
+  tablet-size: 64px,
+  mobile-size: 52px
+);
+
+$text-preset-2: (
+  font: 'Nunito',
+  weight: 800, // ExtraBold
+  size: 48px,
+  line-height: 120%,
+  letter-spacing: -2px,
+  mobile-size: 40px
+);
+
+$text-preset-3: (
+  font: 'Nunito',
+  weight: 700, // Bold
+  size: 32px,
+  line-height: 130%,
+  letter-spacing: -1px
+);
+
+$text-preset-4: (
+  font: 'Nunito',
+  weight: 700, // Bold
+  size: 24px,
+  line-height: 130%,
+  letter-spacing: -1px
+);
+
+$text-preset-5: (
+  font: 'Nunito',
+  weight: 700, // Bold
+  size: 20px,
+  line-height: 140%,
+  letter-spacing: -0.5px
+);
+
+$text-preset-6: (
+  font: 'Nunito Sans',
+  weight: 500, // Medium
+  size: 20px,
+  line-height: 150%,
+  letter-spacing: -0.4px
+);
+
+$text-preset-7: (
+  font: 'Nunito',
+  weight: 600, // SemiBold
+  size: 18px,
+  line-height: 150%,
+  letter-spacing: -0.3px
+);
+
+$text-preset-8: (
+  font: 'Nunito Sans',
+  weight: 700, // Bold
+  size: 16px,
+  line-height: 150%,
+  letter-spacing: -0.3px
+);
+
+$text-preset-9: (
+  font: 'Nunito Sans',
+  weight: 500, // Medium
+  size: 16px,
+  line-height: 150%,
+  letter-spacing: -0.3px
+);
+
+$text-preset-10: (
+  font: 'Nunito Sans',
+  weight: 700, // Bold
+  size: 14px,
+  line-height: 150%,
+  letter-spacing: -0.3px
+);
+
+
+// ===============================
+// Typography Presets Map
+// ===============================
+$text-presets: (
+  1: $text-preset-1,
+  2: $text-preset-2,
+  3: $text-preset-3,
+  4: $text-preset-4,
+  5: $text-preset-5,
+  6: $text-preset-6,
+  7: $text-preset-7,
+  8: $text-preset-8,
+  9: $text-preset-9,
+  10: $text-preset-10
+);
+
+// ===============================
+// Mixin
+// ===============================
+@mixin text-preset($n) {
+  $preset: map-get($text-presets, $n);
+
+  @if $preset == null {
+    @warn "Text preset #{$n} does not exist.";
+  } @else {
+    font-family: map-get($preset, font);
+    font-weight: map-get($preset, weight);
+    font-size: map-get($preset, size);
+    line-height: map-get($preset, line-height);
+    letter-spacing: map-get($preset, letter-spacing);
+
+    // Tablet
+    @if map-has-key($preset, tablet-size) {
+      @media (max-width: 1024px) {
+        font-size: map-get($preset, tablet-size);
+      }
+    }
+
+    // Mobile
+    @if map-has-key($preset, mobile-size) {
+      @media (max-width: 768px) {
+        font-size: map-get($preset, mobile-size);
+      }
+    }
+  }
+}
