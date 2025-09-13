@@ -1,5 +1,6 @@
 import RecepieCard from "./recepieCard";
 import data from "../../public/data.json";
+import "./recepies.css";
 function Recepies() {
   return (
     <div className="recepies-container">
@@ -9,12 +10,12 @@ function Recepies() {
           imgageUrl={item.image.large}
           slug={item.slug}
           title={item.title}
-          description={item.overview}
+          overview={item.overview}
           servings={item.servings}
           prepMinutes={item.prepMinutes}
           cookMinutes={item.cookMinutes}
-          ingredients={item.ingredients}
-          instructions={item.instructions}
+          variant={"simple"}
+          viewRecipe={item.sourceUrl}
         />
       ))}
     </div>

@@ -1,0 +1,52 @@
+@use "../Utils/Util" as u;
+.recepie-card {
+  border-radius: u.$radius-8;
+  padding: u.$spacing-8;
+  margin: u.$spacing-16;
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: u.$spacing-16;
+  background-color: u.$neutral-0;
+  color: u.$neutral-900;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: u.$radius-8;
+    margin-bottom: u.$spacing-8;
+  }
+
+  .recipe-info {
+    display: flex;
+    flex-direction: column;
+    gap: u.$spacing-10;
+  }
+
+  .details-container {
+    display: flex;
+    gap: u.$spacing-12;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: u.$spacing-16;
+  }
+  .btn-view-recipe{
+    background-color: u.$neutral-900;
+    color: u.$neutral-0;
+    border: none;
+    padding: u.$spacing-12;
+    border-radius: u.$radius-6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: lighten($color: u.$neutral-900, $amount: 5%) ;
+    }
+  }
+}

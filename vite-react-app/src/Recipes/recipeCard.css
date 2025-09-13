@@ -1,0 +1,44 @@
+.recepie-card {
+  border-radius: 8px;
+  padding: 8px;
+  margin: 16px;
+  width: 370px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background-color: #FFFFFF;
+  color: #163A34;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.recepie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+.recepie-card .recipe-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recepie-card .details-container {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.recepie-card ul {
+  list-style-type: none;
+  padding-left: 16px;
+}
+.recepie-card .btn-view-recipe {
+  background-color: #163A34;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.recepie-card .btn-view-recipe:hover {
+  background-color: rgb(29.0125, 76.4875, 68.575);
+}/*# sourceMappingURL=recepieCard.css.map */
