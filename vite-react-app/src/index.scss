@@ -1,21 +1,22 @@
+@use "./Utils/Util" as u;
 :root {
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 0;
+  margin: u.$spacing-0 auto;
+  padding: u.$spacing-0;
   box-sizing: border-box;
 }
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: u.$spacing-0;
+  padding: u.$spacing-0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
 body {
-  background-color: #F6F5F1;
-}/*# sourceMappingURL=index.css.map */
+  background-color: u.$neutral-100;
+}
