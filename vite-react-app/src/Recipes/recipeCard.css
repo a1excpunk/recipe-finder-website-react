@@ -38,7 +38,4 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-.recepie-card .btn-view-recipe:hover {
-  background-color: rgb(29.0125, 76.4875, 68.575);
-}/*# sourceMappingURL=recepieCard.css.map */
+}/*# sourceMappingURL=recipeCard.css.map */
