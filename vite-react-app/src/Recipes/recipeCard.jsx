@@ -1,5 +1,8 @@
-import "./recepieCard.css";
-function RecepieCard({
+import "./recipeCard.css";
+import servingIcon from "../../public/assets/images/icon-servings.svg";
+import prepTimeIcon from "../../public/assets/images/icon-prep-time.svg";
+import cookTimeIcon from "../../public/assets/images/icon-cook-time.svg";
+function RecipeCard({
   title,
   overview,
   servings,
@@ -20,11 +23,30 @@ function RecepieCard({
           <p className="overview">{overview}</p>
         </div>
         <div className="details-container">
-          <p className="servings">Servings: {servings}</p>
-          <p className="preparation-time">
-            Preparation Time: {prepMinutes} minutes
+          <p className="servings">
+            <img
+              className="details-icon"
+              src={servingIcon}
+              alt="servings icon"
+            />
+            Servings: {servings}
           </p>
-          <p className="cooking-time">Cooking Time: {cookMinutes} minutes</p>
+          <p className="preparation-time">
+            <img
+              className="details-icon"
+              src={prepTimeIcon}
+              alt="preparation icon"
+            />
+            Prep: {prepMinutes} mins
+          </p>
+          <p className="cooking-time">
+            <img
+              className="details-icon"
+              src={cookTimeIcon}
+              alt="cooking icon"
+            />
+            Cook: {cookMinutes} mins
+          </p>
         </div>
       </div>
       {variant === "detailed" && (
@@ -53,4 +75,4 @@ function RecepieCard({
     </div>
   );
 }
-export default RecepieCard;
+export default RecipeCard;
