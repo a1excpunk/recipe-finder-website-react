@@ -26,6 +26,15 @@
   gap: 12px;
   flex-wrap: wrap;
 }
+.recepie-card .details-container p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.recepie-card .details-container .details-icon {
+  width: auto;
+  margin: 0;
+}
 .recepie-card ul {
   list-style-type: none;
   padding-left: 16px;
@@ -38,4 +47,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+}
+.recepie-card .btn-view-recipe:hover {
+  background-color: rgb(29.0125, 76.4875, 68.575);
 }/*# sourceMappingURL=recipeCard.css.map */

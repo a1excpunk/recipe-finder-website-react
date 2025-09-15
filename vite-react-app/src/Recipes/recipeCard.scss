@@ -1,4 +1,5 @@
 @use "../Utils/Util" as u;
+@use "sass:color";
 .recepie-card {
   border-radius: u.$radius-8;
   padding: u.$spacing-8;
@@ -11,7 +12,6 @@
   color: u.$neutral-900;
 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 
   img {
     width: 100%;
@@ -30,13 +30,22 @@
     display: flex;
     gap: u.$spacing-12;
     flex-wrap: wrap;
+    p {
+      display: flex;
+      align-items: center;
+      gap: u.$spacing-6;
+    }
+    .details-icon {
+      width: auto;
+      margin: u.$spacing-0;
+    }
   }
 
   ul {
     list-style-type: none;
     padding-left: u.$spacing-16;
   }
-  .btn-view-recipe{
+  .btn-view-recipe {
     background-color: u.$neutral-900;
     color: u.$neutral-0;
     border: none;
@@ -46,7 +55,7 @@
     transition: background-color 0.3s ease;
 
     &:hover {
-      // background-color: lighten($color: u.$neutral-900, $amount: 5%) ;
+      background-color: color.adjust(u.$neutral-900, $lightness: 5%);
     }
   }
 }
